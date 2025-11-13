@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>林新宇 · 个人博客</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Xinyu.log</div>
+      <nav>
+        <a href="#about">关于我</a>
+        <a href="#writing">文章</a>
+        <a href="#newsletter">通讯</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button class="theme-toggle" aria-label="切换主题">
+        <span>☀️</span>
+        <span>🌙</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">你好，我是林新宇 · 产品型前端工程师</p>
+          <h1>
+            记录构建友好产品的道路，<br />
+            分享代码、设计与学习笔记。
+          </h1>
+          <p class="lead">
+            在深圳从事 Web 和跨端产品的设计开发，热衷于用清晰的文字和
+            demo 分享实践经验，帮助更多人快速搭建创意原型与数字作品。
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#writing">阅读最新文章</a>
+            <a class="btn ghost" href="#newsletter">订阅周刊</a>
+          </div>
+          <ul class="stats">
+            <li>
+              <span>7+</span>
+              <p>年产品/前端经验</p>
+            </li>
+            <li>
+              <span>120+</span>
+              <p>文章与笔记</p>
+            </li>
+            <li>
+              <span>15K+</span>
+              <p>Newsletter 订阅</p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <p class="card-title">正在折腾</p>
+          <ul>
+            <li>
+              <strong>AI 辅助设计</strong>
+              <span>探索生成式 UI 工具与 Prompt Patterns</span>
+            </li>
+            <li>
+              <strong>个人知识库</strong>
+              <span>基于 Obsidian + Astro 的写作流程</span>
+            </li>
+            <li>
+              <strong>数字花园</strong>
+              <span>公共笔记实验室，欢迎围观</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="section-heading">
+          <p class="eyebrow">关于作者</p>
+          <h2>持续好奇，是我创作的底气</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>专注于让体验更丝滑</h3>
+            <p>
+              关注产品策略、设计系统与高质量实现。擅长将模糊想法拆解为可执行的原型，靠快速迭代验证方向，让团队在确定性中前进。
+            </p>
+          </article>
+          <article>
+            <h3>热爱写作与讲述</h3>
+            <p>
+              通过博客、播客与线下沙龙分享内容，主题涉及 AI 工作流、前端工程、设计协作与自我管理，期待与同行共同进步。
+            </p>
+          </article>
+          <article>
+            <h3>正在寻找新的合作</h3>
+            <p>
+              若你在寻找副业合伙人、顾问或讲师，可通过页面底部的表单联系我。也欢迎投递项目想法，一起把脑洞变成作品。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="writing" class="writing">
+        <div class="section-heading">
+          <p class="eyebrow">最新创作</p>
+          <h2>精选文章与速记</h2>
+          <p>
+            每周更新 2~3 篇内容，涵盖产品方法论、前端工程、AI 助手与个人成长
+            4 个板块。你可以通过标签筛选或搜索标题。
+          </p>
+        </div>
+
+        <div class="filters">
+          <div class="tags" id="tagFilters"></div>
+          <input type="search" id="search" placeholder="搜索标题或关键词" />
+        </div>
+
+        <div class="featured" id="featuredPost"></div>
+        <div class="post-grid" id="postList"></div>
+      </section>
+
+      <section class="newsletter" id="newsletter">
+        <div class="section-heading">
+          <p class="eyebrow">Newsletter</p>
+          <h2>《半熟创作者》周刊</h2>
+          <p>
+            每周日寄出的长文，分享我的工作流、阅读与实践复盘。订阅后即可获得
+            《个人知识库搭建指南》 PDF。
+          </p>
+        </div>
+        <form class="subscribe-form">
+          <input type="text" placeholder="你的名字" required />
+          <input type="email" placeholder="邮箱" required />
+          <button type="submit" class="btn primary">立即订阅</button>
+        </form>
+        <p class="tiny">
+          * 提交即表示你同意接收邮件并可随时退订，承诺不会发送垃圾信息。
+        </p>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">联系我</p>
+          <h2>把想法告诉我</h2>
+        </div>
+        <form class="contact-form">
+          <label>
+            姓名
+            <input type="text" required />
+          </label>
+          <label>
+            邮箱
+            <input type="email" required />
+          </label>
+          <label>
+            想合作的内容
+            <textarea rows="4" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">发送</button>
+        </form>
+        <div class="contact-info">
+          <p>
+            或者直接发送邮件至
+            <a href="mailto:hi@xinyu.design">hi@xinyu.design</a>，欢迎提供讲座、咨询与写作邀请。
+          </p>
+          <ul>
+            <li>WeChat：linxinyu</li>
+            <li>Twitter：@xinyu_builds</li>
+            <li>GitHub：@xinyu-dev</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Xinyu Lin. 用热爱记录生活与工作。</p>
+      <p>Made with一点点咖啡 & 好奇心。</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
